@@ -1,6 +1,6 @@
-package com.yupi;
+package com.yupi.maker;
 
-import com.yupi.command.CommandExecutor;
+import com.yupi.maker.cli.command.CommandExecutor;
 
 /**
  * @author 12209
