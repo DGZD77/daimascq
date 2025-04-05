@@ -1,4 +1,4 @@
-package com.yupi.maker.model;
+package  ${basePackage}.maker.model;
 
 
 import java.util.Scanner;

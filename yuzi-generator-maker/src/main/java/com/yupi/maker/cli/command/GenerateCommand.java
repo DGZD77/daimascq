@@ -12,7 +12,7 @@ import java.util.concurrent.Callable;
 /**
  * @author 12209
  * @date 2025/3/22 1:07
- * @className GeneratorCommand
+ * @className GenerateCommand.java.ftl
  */
 @Command(name = "generate", description = "生成代码", mixinStandardHelpOptions = true)
 @Data
