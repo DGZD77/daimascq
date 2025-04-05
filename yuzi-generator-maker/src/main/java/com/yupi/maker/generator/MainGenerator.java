@@ -14,40 +14,28 @@ import java.io.IOException;
 public class MainGenerator {
 
     public static void main(String[] args) throws Exception {
-      String inputFilePath;
+         String inputFilePath;
       String outputFilePath;
       Meta meta = MetaManager.getMetaObject();
       String projectPath=System.getProperty("user.dir");
       String parentPath = new File(projectPath).getParent();
       String inputResourcePath=parentPath+File.separator+meta.getFileConfig().getInputRootPath();
-      String outputBaseJavaPackagePath = parentPath+File.separator+meta.getFileConfig().getOutputRootPath();
-    	// cli.command.ConfigCommand
-        inputFilePath = inputResourcePath + File.separator + "templates/java/cli/command/ConfigCommand.java.ftl";
-        outputFilePath = outputBaseJavaPackagePath + "/cli/command/ConfigCommand.java";
-        System.out.println("Input file path: " + inputFilePath);
-System.out.println("Output file path: " + outputFilePath);
-
+      String outputBaseJavaPackagePath = projectPath+File.separator+meta.getFileConfig().getOutputRootPath();
+    	// generator.DynamicGenerator
+        inputFilePath = inputResourcePath + File.separator + "templates/java/generator/DynamicGenerator.java.ftl";
+        outputFilePath = outputBaseJavaPackagePath + "/acm-template-pro-generator/src/main/java/com/yupi/generated/DynamicGenerator.java";
+      System.out.println(outputFilePath);
+      System.out.println(inputFilePath);
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
-        // cli.command.GenerateCommand
-        inputFilePath = inputResourcePath + File.separator + "templates/java/cli/command/GenerateCommand.java.ftl";
-        outputFilePath = outputBaseJavaPackagePath + "/cli/command/GenerateCommand.java";
+        // generator.MainGenerator
+        inputFilePath = inputResourcePath + File.separator + "templates/java/generator/MainGenerator.java.ftl";
+        outputFilePath = outputBaseJavaPackagePath + "/acm-template-pro-generator/src/main/java/com/yupi/generated/MainGenerator.java";
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
-        // cli.command.ListCommand
-        inputFilePath = inputResourcePath + File.separator + "templates/java/cli/command/ListCommand.java.ftl";
-        outputFilePath = outputBaseJavaPackagePath + "/cli/command/ListCommand.java";
-        DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
-
-        // cli.CommandExecutor
-        inputFilePath = inputResourcePath + File.separator + "templates/java/cli/CommandExecutor.java.ftl";
-
-        outputFilePath = outputBaseJavaPackagePath + "/cli/CommandExecutor.java";
-        DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
-
-        // Main
-        inputFilePath = inputResourcePath + File.separator + "templates/java/Main.java.ftl";
-        outputFilePath = outputBaseJavaPackagePath + "/Main.java";
+        // generator.StaticGenerator
+        inputFilePath = inputResourcePath + File.separator + "templates/java/generator/StaticGenerator.java.ftl";
+        outputFilePath = outputBaseJavaPackagePath + "/acm-template-pro-generator/src/main/java/com/yupi/generated/StaticGenerator.java";
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
     }
 }
