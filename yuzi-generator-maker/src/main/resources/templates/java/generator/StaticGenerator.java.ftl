@@ -1,7 +1,5 @@
-package templates.java.genarator;
 
-import ${basePackage}.generator;
-
+package ${basePackage}.generator;
 import cn.hutool.core.io.FileUtil;
 
 /**

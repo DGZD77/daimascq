@@ -21,7 +21,7 @@ public class CommandExecutor implements Runnable{
     }
     @Override
     public void run() {
-        System.out.println("请输入具体指令，或者输入--help查看帮助信息");
+        System.out.println("请输入具体指令，或�?�输�?--help查看帮助信息");
     }
     public Integer doExecute(String [] args){
         return commandLine.execute(args);

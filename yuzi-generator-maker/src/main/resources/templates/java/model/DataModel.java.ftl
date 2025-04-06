@@ -1,8 +1,8 @@
-package  ${basePackage}.maker.model;
+package  ${basePackage}.model;
 
 
 import java.util.Scanner;
-
+import lombok.Data;
 /**
  * @author 12209
  * @date 2025/3/21 23:54
@@ -16,7 +16,7 @@ public class DataModel {
      * ${modelInfo.description}
      */
    </#if>
- private ${modelInfo.type}${modelInfo.fieldName}<#if (modelInfo.defaultValue??)> = ${modelInfo.defaultValue?c}</#if>;
+ private ${modelInfo.type} ${modelInfo.fieldName}<#if (modelInfo.defaultValue??)> = ${modelInfo.defaultValue?c}</#if>;
   </#list>
 
 

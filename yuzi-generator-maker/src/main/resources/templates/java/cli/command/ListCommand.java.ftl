@@ -17,7 +17,7 @@ public class ListCommand implements Runnable{
     @Override
     public void run() {
 
-        String inputPath="${fileConfig.inputRootPath}"
+        String inputPath="${fileConfig.inputRootPath}";
         System.out.println("inputPath:"+inputPath);
         List<File> files= FileUtil.loopFiles(inputPath);
         for (File file : files){

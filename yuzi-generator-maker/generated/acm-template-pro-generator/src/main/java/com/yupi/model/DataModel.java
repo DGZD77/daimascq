@@ -1,8 +1,8 @@
-package  com.yupi.maker.model;
+package  com.yupi.model;
 
 
 import java.util.Scanner;
-
+import lombok.Data;
 /**
  * @author 12209
  * @date 2025/3/21 23:54
@@ -11,17 +11,17 @@ import java.util.Scanner;
 @Data
 public class DataModel {
      /**
-     * æ˜¯å¦ç”Ÿæˆå¾ªç¯
+     * ÊÇ·ñÉú³ÉÑ­»·
      */
- private booleanloop = false;
+ private boolean loop = false;
      /**
-     * ä½œè€…æ³¨é‡Š
+     * ×÷Õß×¢ÊÍ
      */
- private Stringauthor = "yupi";
+ private String author = "yupi";
      /**
-     * è¾“å‡ºä¿¡æ¯
+     * Êä³öĞÅÏ¢
      */
- private StringoutputText = "sum = ";
+ private String outputText = "sum = ";
 
 
 

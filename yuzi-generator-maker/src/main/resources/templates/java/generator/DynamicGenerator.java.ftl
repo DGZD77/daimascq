@@ -1,13 +1,11 @@
-package templates.java.genarator;
-
-import ${basePackage}.generator;
+package ${basePackage}.generator;
 
 import cn.hutool.core.io.FileUtil;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
-
 import java.io.File;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;

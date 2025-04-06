@@ -1,7 +1,7 @@
 package ${basePackage}.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
-import ${basePackage}.generator.file.FileGenerator;
+
 import ${basePackage}.model.DataModel;
 import lombok.Data;
 import picocli.CommandLine.Option;
@@ -32,7 +32,7 @@ public class GenerateCommand implements Callable<Integer> {
         System.out.println("author: " + author);
         DataModel mainTemplateConfig = new DataModel();
         BeanUtil.copyProperties(this, mainTemplateConfig);
-        FileGenerator.doGenerator(mainTemplateConfig);
+
         return 0;
     }
 }

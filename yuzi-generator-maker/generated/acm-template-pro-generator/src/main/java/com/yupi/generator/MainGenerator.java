@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * 核心生成器
+ * 核心生成�?
  */
 public class MainGenerator {
 
@@ -19,19 +19,19 @@ public class MainGenerator {
      * @throws IOException
      */
     public static void doGenerate(Object model) throws TemplateException, IOException {
-        String intputRoot=yuzi-generator-maker/src/main/resources;
-        String outputRoot=generated;
+        String intputRoot="yuzi-generator-maker/src/main/resources";
+        String outputRoot="generated";
         String inputPath;
         String outputPath;
-        // 生成实体类
-               intputPath = new File(intputRoot, "src/com/yupi/acm/MainTemplate.java.ftl").getAbsolutePath();
+        // 生成实体�?
+               inputPath = new File(intputRoot, "src/com/yupi/acm/MainTemplate.java.ftl").getAbsolutePath();
                 outputPath = new File(outputRoot, "src/com/yupi/acm/MainTemplate.java").getAbsolutePath();
-                DynamicGeneratir.doGenerate(intputPath, outputPath, model);
-               intputPath = new File(intputRoot, ".gitignore").getAbsolutePath();
+                DynamicGenerator.doGenerate(inputPath, outputPath, model);
+               inputPath = new File(intputRoot, ".gitignore").getAbsolutePath();
                 outputPath = new File(outputRoot, ".gitignore").getAbsolutePath();
-                StaticFileGenerator.copyFilesByGutool(intputPath, outputPath);
-               intputPath = new File(intputRoot, "README.md").getAbsolutePath();
+                StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+               inputPath = new File(intputRoot, "README.md").getAbsolutePath();
                 outputPath = new File(outputRoot, "README.md").getAbsolutePath();
-                StaticFileGenerator.copyFilesByGutool(intputPath, outputPath);
+                StaticGenerator.copyFilesByHutool(inputPath, outputPath);
     }
 }

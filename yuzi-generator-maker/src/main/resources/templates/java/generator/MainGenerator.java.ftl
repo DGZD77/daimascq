@@ -19,18 +19,18 @@ public class MainGenerator {
      * @throws IOException
      */
     public static void doGenerate(Object model) throws TemplateException, IOException {
-        String intputRoot=${fileConfig.inputRootPath};
-        String outputRoot=${fileConfig.outputRootPath};
+        String intputRoot="${fileConfig.inputRootPath}";
+        String outputRoot="${fileConfig.outputRootPath}";
         String inputPath;
         String outputPath;
         // 生成实体类
         <#list fileConfig.files as fileInfo>
-               intputPath = new File(intputRoot, "${fileInfo.inputPath}").getAbsolutePath();
+               inputPath = new File(intputRoot, "${fileInfo.inputPath}").getAbsolutePath();
                 outputPath = new File(outputRoot, "${fileInfo.outputPath}").getAbsolutePath();
             <#if fileInfo.generateType=="static">
-                StaticFileGenerator.copyFilesByGutool(intputPath, outputPath);
+                StaticGenerator.copyFilesByHutool(inputPath, outputPath);
             <#else>
-                DynamicGeneratir.doGenerate(intputPath, outputPath, model);
+                DynamicGenerator.doGenerate(inputPath, outputPath, model);
             </#if>
         </#list>
     }

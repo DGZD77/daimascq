@@ -88,15 +88,15 @@ public class MainGenerator {
 
         // pom.xml
         inputFilePath = inputResourcePath + File.separator + "templates/pom.xml.ftl";
-        outputFilePath = outputPath2 + File.separator + "pom.xml";
+        outputFilePath = outputPath + File.separator + "pom.xml";
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
         // 构建 jar 包
-        JarGenerator.doGenerate(outputPath2);
+        JarGenerator.doGenerate(outputPath);
 
 
         // 封装脚本
-        String shellOutputFilePath = outputPath2 + File.separator + "generator";
+        String shellOutputFilePath = outputPath + File.separator + "generator";
         String jarName = String.format("%s-%s-jar-with-dependencies.jar", meta.getName(), meta.getVersion());
         String jarPath = "target/" + jarName;
         ScriptGenerator.doGenerate(shellOutputFilePath, jarPath);

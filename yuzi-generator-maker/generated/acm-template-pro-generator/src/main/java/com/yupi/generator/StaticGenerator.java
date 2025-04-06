@@ -1,11 +1,9 @@
-package templates.java.genarator;
 
-import com.yupi.generator;
-
+package com.yupi.generator;
 import cn.hutool.core.io.FileUtil;
 
 /**
- * 静态文件生成
+ * 静�?�文件生�?
  */
 public class StaticGenerator {
 
