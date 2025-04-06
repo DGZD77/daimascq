@@ -1,4 +1,4 @@
-package com.yupi.maker.model;
+package  com.yupi.maker.model;
 
 
 import java.util.Scanner;
@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 @Data
 public class DataModel {
-       /**
+     /**
      * 是否生成循环
      */
  private booleanloop = false;
